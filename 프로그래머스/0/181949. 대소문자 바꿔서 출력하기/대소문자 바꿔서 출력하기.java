@@ -6,18 +6,17 @@ public class Solution {
         String a = sc.next();
         char[] ch = new char[a.length()];
         
-        for (int i = 0; i < a.length(); i++) {
-            ch[i] = a.charAt(i);
-        }
-        
         int n = 'a' - 'A';
         
         for(int i = 0; i < a.length(); i++) {
+            ch[i] = a.charAt(i);
+            
             if (ch[i] < 'a') {
                 ch[i] += n;
             } else {
                 ch[i] -= n;
             }
+            
             System.out.print(ch[i]);
         }
     }
